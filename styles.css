@@ -3,12 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+h3 {
+    display: flex;
+    justify-content: center;
+    margin: 10px 25px;
+}
 #grid {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 300px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    border: solid 3px #494A4D;
+    border-radius: 5px;
+}
 
+#grid > img {
+    width: 130px;
+    height: calc(130px - 2%);
+    padding: 5px;
 }
 
