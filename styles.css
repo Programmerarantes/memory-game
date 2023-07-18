@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #ECECEC;
+    height: 95vh;
+}
 h3 {
     display: flex;
     justify-content: center;
@@ -19,11 +23,31 @@ h3 {
     margin: auto;
     border: solid 3px #494A4D;
     border-radius: 5px;
+    background-color: white;
 }
 
 #grid > img {
     width: 130px;
     height: calc(130px - 2%);
     padding: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: .5s;
 }
-
+#grid img:active {
+    transform: scale(.97);
+    transition: .2s;
+}
+#reload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #898A8C;
+    color: black;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}

@@ -1,6 +1,7 @@
 const gridDisplay = document.querySelector("#grid")
 const insertText = document.querySelector('#insert-text')
 const result = document.querySelector('#result')
+const reloadBtn = document.querySelector('#reload')
 let cardSelect = []
 let cardSelectId = []
 const cardWon = []
@@ -75,7 +76,7 @@ function checkMatch() {
         cards[cardTwoId].setAttribute('src', 'imgs/capa.png')
         alert("You have clicked the same image")
     }
-    if(cardSelect[0] == cardSelect[1]) {
+    if(cardOneId == cardTwoId) {
         alert("You found a match!")
         cards[cardOneId].setAttribute('src', 'imgs/white.png')
         cards[cardTwoId].setAttribute('src', 'imgs/white.png')
@@ -104,7 +105,11 @@ function flipCard() {
     cardSelectId.push(cardId)
     this.setAttribute('src', imgsArray[cardId].img)
     if(cardSelect.length === 2) {
-        setTimeout( checkMatch, 1200)
+        setTimeout( checkMatch, 500)
     }
 
 }
+
+reloadBtn.addEventListener('click', () => {
+    location.reload()
+})
