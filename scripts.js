@@ -102,9 +102,12 @@ function flipCard() {
     let cardId = this.getAttribute('data-id')
     cardSelect.push(imgsArray[cardId].name)
     cardSelectId.push(cardId)
+    if(this.src.includes('imgs/capa.png')){return null}
     this.setAttribute('src', imgsArray[cardId].img)
+    console.log(imgsArray[cardId])
     if(cardSelect.length === 2) {
         setTimeout( checkMatch, 500)
+ 
     }
 
 }
