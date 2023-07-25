@@ -63,7 +63,6 @@ function createBoard() {
     }
      
 }
-createBoard()
 //
 function checkMatch() {
     const cards = document.querySelectorAll('#grid img')
@@ -76,7 +75,7 @@ function checkMatch() {
         cards[cardTwoId].setAttribute('src', 'imgs/capa.png')
         alert("You have clicked the same image")
     }
-    if(cardOneId == cardTwoId) {
+    else if(cardSelect[0] === cardSelect[1]) {
         alert("You found a match!")
         cards[cardOneId].setAttribute('src', 'imgs/white.png')
         cards[cardTwoId].setAttribute('src', 'imgs/white.png')
@@ -93,7 +92,7 @@ function checkMatch() {
     cardSelectId = []
 
     if(cardWon.length == imgsArray.length/2) {
-        result.innerHTML = "Congratulations!"
+        result.textContent = "Congratulations!"
     }
 }
 
@@ -109,6 +108,7 @@ function flipCard() {
     }
 
 }
+createBoard()
 
 reloadBtn.addEventListener('click', () => {
     location.reload()
